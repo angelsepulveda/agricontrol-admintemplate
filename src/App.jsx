@@ -1,7 +1,7 @@
-import ResponsiveDrawer from "./components/ResponsiveDrawer";
+import Layout from "./components/Layout";
 
 export default function App() {
    return (
-     <ResponsiveDrawer/>
+     <Layout/>
    );
 }
