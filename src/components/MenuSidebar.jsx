@@ -32,8 +32,10 @@ export default function MenuSidebar() {
 
   return (
     <div>
-      <Toolbar />
-      <Divider />
+      <Toolbar>
+        <img src="./static/image/logo-empresa.png" className="logo"/>
+      </Toolbar>
+      <Divider sx={{backgroundColor: '#374850'}}/>
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -70,6 +72,7 @@ export default function MenuSidebar() {
           <ListItemButton sx={{ 
               py: '2px',
               px: 5,
+              backgroundColor: '#2C3B41',
               color: 'rgba(255, 255, 255, 0.7)',
               '&:hover, &:focus': {
                 bgcolor: '#00A65A',
