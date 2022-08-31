@@ -1,21 +1,14 @@
 import React from 'react';
+import {List,ListItem, ListItemButton,ListItemIcon,ListItemText,Divider,Toolbar,Collapse } from "@mui/material";
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
-import Divider from '@mui/material/Divider';
-import Toolbar from '@mui/material/Toolbar';
-import Collapse from '@mui/material/Collapse';
 import StarBorder from '@mui/icons-material/StarBorder';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 
 export default function MenuSidebar() {
 
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -66,7 +59,7 @@ export default function MenuSidebar() {
         </ListItemIcon>
         <ListItemText primary="Inbox" sx={{ color: '#fff' }} />
         {open ? <ExpandLess sx={{ color: '#fff' }}/> : <ExpandMore sx={{ color: '#fff' }}/>}
-      </ListItemButton>
+        </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItemButton sx={{ 
@@ -82,6 +75,34 @@ export default function MenuSidebar() {
               <StarBorder />
             </ListItemIcon>
             <ListItemText primary="Starred" />
+          </ListItemButton>
+          <ListItemButton sx={{ 
+              py: '2px',
+              px: 5,
+              backgroundColor: '#2C3B41',
+              color: 'rgba(255, 255, 255, 0.7)',
+              '&:hover, &:focus': {
+                bgcolor: '#00A65A',
+              },
+           }}>
+            <ListItemIcon sx={{ color: '#fff' }}>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Starred 2" />
+          </ListItemButton>
+          <ListItemButton sx={{ 
+              py: '2px',
+              px: 5,
+              backgroundColor: '#2C3B41',
+              color: 'rgba(255, 255, 255, 0.7)',
+              '&:hover, &:focus': {
+                bgcolor: '#00A65A',
+              },
+           }}>
+            <ListItemIcon sx={{ color: '#fff' }}>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Starred 3" />
           </ListItemButton>
         </List>
       </Collapse>

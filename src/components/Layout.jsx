@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
