@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material";
 /**
  *  COLORES DE LA APLICACIÓN
  */
-const primary = "#4CAF50";
+const primary = "#00A65A";
 
 /** FIN COLORES DE LA APLICACION**/
 
@@ -20,6 +20,31 @@ const theme = createTheme({
           textTransform: 'none',
           boxShadow: 'none',
           color: '#fff',
+        },
+      },
+    },
+    MuiListItem: {
+      styleOverrides:{
+        root:{
+          "&.Mui-selected:hover": {
+            backgroundColor: "red",
+          }
+        }
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: '#222D32',
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            color: '#fff',
+          },
         },
       },
     },
