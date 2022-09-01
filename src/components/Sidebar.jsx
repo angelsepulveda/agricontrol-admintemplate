@@ -6,7 +6,7 @@ export default function Sidebar(props) {
   return (
     <Box
     component="nav"
-    sx={{ width: { sm: 240 }, flexShrink: { sm: 0 } }}
+    sx={{ width: { sm: 240, xs: 0 }, flexShrink: { sm: 0 } }}
     aria-label="mailbox folders"
   >
     {/* The implementation can be swapped with js to avoid SEO duplication of links. */}

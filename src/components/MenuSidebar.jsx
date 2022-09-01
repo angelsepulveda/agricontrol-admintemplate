@@ -1,5 +1,5 @@
 import React from 'react';
-import {List,ListItem, ListItemButton,ListItemIcon,ListItemText,Divider,Toolbar,Collapse } from "@mui/material";
+import { List,ListItem, ListItemButton,ListItemIcon,ListItemText,Divider,Toolbar,Collapse } from "@mui/material";
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import StarBorder from '@mui/icons-material/StarBorder';
@@ -8,6 +8,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 
 export default function MenuSidebar() {
 
+  
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
