@@ -1,7 +1,20 @@
-import Layout from "./components/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routes from "./shared/config/routes";
 
 export default function App() {
    return (
-     <Layout/>
+     <BrowserRouter>
+       <Routes>
+        {routes.map((route,index) => (
+            <Route
+              key={index}
+              path={route.path}
+              element={<route.layout>
+                <route.component />
+              </route.layout>}
+            />
+          ))}
+       </Routes>
+     </BrowserRouter>
    );
 }
